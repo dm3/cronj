@@ -6,6 +6,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.logging "0.3.0"]
                  [clj-time "0.8.0"]
+                 [manifold "0.1.5"]
                  [im.chit/hara.common.primitives "2.1.12"]
                  [im.chit/hara.namespace.import "2.1.12"]
                  [im.chit/hara.ova "2.1.12"]

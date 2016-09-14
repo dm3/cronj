@@ -1,6 +1,7 @@
 (ns cronj.data.timer
   (:require [clj-time.core :as t]
             [clj-time.local :as lt]
+            [manifold.deferred :as d]
             [cronj.data.tab :as tab]
             [clojure.tools.logging :as log]))
 
@@ -59,7 +60,7 @@
       (swap! timer assoc
              :start-time (lt/local-now)
              :interval interval
-             :thread (future (timer-fn timer recur?)))
+             :thread (d/future (timer-fn timer recur?)))
       :else
       (log/info "The timer is already running."))))
 
